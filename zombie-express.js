@@ -1,11 +1,11 @@
-var assert = require("assert");
-var path = require("path"),
+var assert = require("assert"),
+	path = require("path"),
 	Browser = require("zombie"),
 	express = require('express');
 
 Browser.localhost('127.0.0.1', 8081);
 var browser = new Browser();
-var server = express().use('/', express.static(__dirname)).listen(8081);
+var server = express().use('/', express.static(__dirname)).listen(8081, '127.0.0.1');
 
 browser.visit("temp/index.html").then(function(){
 	console.log('LOADED');
