@@ -9,44 +9,44 @@
 <head>
 	<meta charset="utf-8">
 	<title>index - index</title>
-	
+
 	<link rel="stylesheet" type="text/css" href="./static/bundles/bit-docs-site/static.css">
-	
+
 </head>
 
 <body>
 	<header></header>
 	<div class="content">
-	
-		<nav class="sidebar">
-	
-		
 
-	
+		<nav class="sidebar">
+
+
+
+
 </nav>
 
-	
+
 	<article class="main">
-		
+
 			<section class="title">
 	<h1>index</h1>
 </section>
 
-		
 
-		
-			
-		
 
-		
-			
+
+
+
+
+
+
 				<section class="body">
     <div class='demo_wrapper' data-demo-src='test/basics/demo.html'></div>
 
 </section>
 
-			
-		
+
+
 	</article>
 </div>
 	<footer></footer>
@@ -55,18 +55,21 @@
 		var docObject = {"name":"index","demo":"path/to/demo.html","pathToRoot":""};
 	</script>
 
-	
+
 		<script>
 		  steal = {
 		    instantiated: {
-		      "bundles/bit-docs-site/static.css!$css" : null
+		      //"bundles/bit-docs-site/static.css!$css" : null
 		    }
 		  }
 		</script>
 		<script type='text/javascript'
 				data-main="bit-docs-site/static"
-				src="./static/steal.production.js"></script>
-	
+				data-config="./package.json!npm"
+				data-env="production"
+				data-bundles-path="./static/bundles"
+				src="./static/steal.js"></script>
+
 </body>
 
 </html>
