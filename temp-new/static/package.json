@@ -1,0 +1,1 @@
+{"name":"bit-docs-site","version":"0.0.1","description":"A site to be built","main":"static.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"steal":{"plugins":["steal-less"]},"author":"Bitovi","license":"MIT","dependencies":{"steal":"1.X","steal-less":"1.X","bit-docs-tag-demo":"file:/Users/leoj/bitovi/,+/bd/1/bit-docs-tag-demo"}}

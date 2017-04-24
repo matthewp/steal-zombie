@@ -1025,8 +1025,13 @@ define('package.json!npm', [
         }
     ], { 'npmParentMap': {} }));
 });
+console.log('OUTSIDE THE MODULE EXPORTS');
+window.addEventListener('error', function(err) {
+  console.log('UNCAUGHT ERROR', err);
+});
 /*bit-docs-tag-demo@0.3.0#demo_frame*/
 define('bit-docs-tag-demo@0.3.0#demo_frame', function (require, exports, module) {
+  console.log('INSIDE THE MODULE EXPORTS');
     var template = '<ul>' + '<li class="tab" data-tab="demo">Demo</li>' + '<li class="tab" data-tab="html">HTML</li>' + '<li class="tab" data-tab="js" style="display:none;">JS</li>' + '</ul>' + '<div class="tab-content" data-for="demo">' + '<iframe></iframe>' + '</div>' + '<div class="tab-content" data-for="html">' + '<pre class="prettyprint"></pre>' + '</div>' + '<div class="tab-content" data-for="js">' + '<pre class="prettyprint lang-js"></pre>' + '</div>';
     function render(node, docObject) {
         var demoDiv = document.createElement('div');
