@@ -6974,14 +6974,14 @@ addStealExtension(function (loader) {
 
 		scriptOptions.stealURL = script.src;
 
-		debugger;
 
 		each(script.attributes, function(attr){
+			var name = attr.name || attr.nodeName;
 			// get option, remove "data" and camelize
 			var optionName =
-				camelize( attr.nodeName.indexOf("data-") === 0 ?
-					attr.nodeName.replace("data-","") :
-					attr.nodeName );
+				camelize( name.indexOf("data-") === 0 ?
+					name.replace("data-","") :
+					name );
 			// make options uniform e.g. baseUrl => baseURL
 			optionName = optionName.replace(urlRegEx, "URL")
 			scriptOptions[optionName] = (attr.value === "") ? true : attr.value;
