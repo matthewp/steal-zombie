@@ -11,10 +11,16 @@ browser.visit("temp/index.html").then(function(){
 	console.log('LOADED');
 
 	setTimeout(function(){
+		var window = browser.window;
+
+		window.PACKAGES;
+
+		console.log("PACKAGES:", window.PACKAGES);
+
 		browser.assert.element('.demo_wrapper');
 		browser.assert.element('.demo');
 		server.close();
-		
+
 	}, 2000);
 
 	return;

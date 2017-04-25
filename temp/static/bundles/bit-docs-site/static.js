@@ -1,6 +1,9 @@
 /*[system-bundles-config]*/
 System.bundles = {"bundles/bit-docs-site/static.css!":["bit-docs-site@0.0.1#styles/styles.less!steal-less@1.2.0#less"]};
 /*npm-utils*/
+
+console.log("THIS EXECUTES");
+
 define('npm-utils', function (require, exports, module) {
     (function (global) {
         var slice = Array.prototype.slice;
