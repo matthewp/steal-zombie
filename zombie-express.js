@@ -10,6 +10,15 @@ var server = express().use('/', express.static(__dirname)).listen(8081, '127.0.0
 browser.visit("temp/index.html").then(function(){
 	console.log('LOADED');
 
+	setTimeout(function(){
+		browser.assert.element('.demo_wrapper');
+		browser.assert.element('.demo');
+		server.close();
+		
+	}, 2000);
+
+	return;
+
 	browser.assert.success();
 	browser.assert.element('.demo_wrapper');
 	browser.assert.element('.demo');

@@ -6974,8 +6974,10 @@ addStealExtension(function (loader) {
 
 		scriptOptions.stealURL = script.src;
 
+		console.log('we are here');
 
 		each(script.attributes, function(attr){
+			console.log('nodeName is', attr.nodeName, attr.name);
 			var name = attr.name || attr.nodeName;
 			// get option, remove "data" and camelize
 			var optionName =
